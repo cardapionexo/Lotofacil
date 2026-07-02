@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lotofácil Pro 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0e17;
+            color: #e8edf5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 16px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* ===== HEADER PREMIUM ===== */
+        .header {
+            text-align: center;
+            padding: 10px 0 20px;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(247, 183, 49, 0.2), transparent);
+        }
+        .header h1 {
+            font-size: 30px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f7b731, #f5a623, #f7b731);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s ease-in-out infinite;
+            letter-spacing: -0.5px;
+        }
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .header .sub {
+            font-size: 13px;
+            color: #6b7a8f;
+            margin-top: 4px;
+            letter-spacing: 0.3px;
+        }
+        .header .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(247, 183, 49, 0.08);
+            color: #f7b731;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 8px;
+            border: 1px solid rgba(247, 183, 49, 0.1);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 14px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+        .card-title {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b7a8f;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ===== MODOS ===== */
+        .modes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .modes .mode-btn {
+            padding: 10px 4px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            color: #6b7a8f;
+            font-size: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .modes .mode-btn .emoji {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+        .modes .mode-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            background: linear-gradient(135deg, rgba(247, 183, 49, 0.1), rgba(245, 166, 35, 0.05));
+        }
+        .modes .mode-btn:hover::before {
+            opacity: 1;
+        }
+        .modes .mode-btn:active {
+            transform: scale(0.95);
+        }
+        .modes .mode-btn.active {
+            background: rgba(247, 183, 49, 0.08);
+            border-color: rgba(247, 183, 49, 0.25);
+            color: #f7b731;
+            box-shadow: 0 0 30px rgba(247, 183, 49, 0.05);
+        }
+        .modes .mode-btn.active::before {
+            opacity: 1;
+        }
+
+        /* ===== BOTÕES ===== */
+        .btn-group {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .btn-group .btn {
+            flex: 1;
+            min-width: 55px;
+            padding: 11px 8px;
+            border: none;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: inherit;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-group .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .btn-group .btn:active {
+            transform: scale(0.95);
+        }
+        .btn-group .btn.primary {
+            background: linear-gradient(135deg, #f7b731, #f5a623);
+            color: #0a0e17;
+            box-shadow: 0 4px 20px rgba(247, 183, 49, 0.15);
+        }
+        .btn-group .btn.primary:active {
+            box-shadow: 0 2px 10px rgba(247, 183, 49, 0.08);
+        }
+        .btn-group .btn.secondary {
+            background: rgba(88, 166, 255, 0.08);
+            border: 1px solid rgba(88, 166, 255, 0.1);
+            color: #58a6ff;
+        }
+        .btn-group .btn.secondary:hover {
+            background: rgba(88, 166, 255, 0.12);
+        }
+        .btn-group .btn.green {
+            background: rgba(63, 185, 80, 0.08);
+            border: 1px solid rgba(63, 185, 80, 0.1);
+            color: #3fb950;
+        }
+        .btn-group .btn.green:hover {
+            background: rgba(63, 185, 80, 0.12);
+        }
+        .btn-group .btn.purple {
+            background: rgba(163, 113, 247, 0.08);
+            border: 1px solid rgba(163, 113, 247, 0.1);
+            color: #a371f7;
+        }
+        .btn-group .btn.purple:hover {
+            background: rgba(163, 113, 247, 0.12);
+        }
+
+        /* ===== FILTROS ===== */
+        .filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .filters label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #6b7a8f;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .filters label:hover {
+            color: #8b9aaf;
+        }
+        .filters input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            accent-color: #f7b731;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* ===== STATS PREMIUM ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 12px 6px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.3s;
+        }
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .stat-item .label {
+            font-size: 8px;
+            text-transform: uppercase;
+            color: #6b7a8f;
+            letter-spacing: 0.8px;
+        }
+        .stat-item .value {
+            font-size: 24px;
+            font-weight: 900;
+            margin-top: 2px;
+            transition: all 0.3s;
+        }
+        .stat-item .value.par { color: #58a6ff; }
+        .stat-item .value.impar { color: #f7b731; }
+        .stat-item .value.primo { color: #a371f7; }
+        .stat-item .value.soma { color: #3fb950; }
+
+        .analise-texto {
+            background: rgba(247, 183, 49, 0.04);
+            border: 1px solid rgba(247, 183, 49, 0.06);
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #8b9aaf;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .analise-texto strong {
+            color: #f7b731;
+            font-weight: 700;
+        }
+        .analise-texto .perfeito { color: #3fb950; }
+        .analise-texto .bom { color: #58a6ff; }
+        .analise-texto .aceitavel { color: #f7b731; }
+        .analise-texto .raro { color: #f85149; }
+
+        /* ===== JOGOS ===== */
+        .jogos-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .jogos-header .info {
+            font-size: 12px;
+            color: #6b7a8f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .jogos-header .info .modo-label {
+            background: rgba(247, 183, 49, 0.08);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 9px;
+            font-weight: 600;
+            color: #f7b731;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn-novo {
+            padding: 6px 18px;
+            background: rgba(247, 183, 49, 0.08);
+            border: 1px solid rgba(247, 183, 49, 0.15);
+            border-radius: 8px;
+            color: #f7b731;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn-novo:hover {
+            background: rgba(247, 183, 49, 0.12);
+        }
+        .btn-novo:active {
+            transform: scale(0.95);
+        }
+
+        .jogo {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            animation: slideUp 0.4s ease-out;
+            transition: all 0.3s;
+        }
+        .jogo:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .jogo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .jogo-header .numero {
+            font-size: 12px;
+            font-weight: 700;
+            color: #6b7a8f;
+        }
+        .jogo-header .stats {
+            font-size: 10px;
+            color: #6b7a8f;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .jogo-header .stats span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .jogo-header .stats .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .jogo-header .stats .dot.par { background: #58a6ff; }
+        .jogo-header .stats .dot.impar { background: #f7b731; }
+        .jogo-header .stats .dot.primo { background: #a371f7; }
+        .jogo-header .stats .dist {
+            background: rgba(255,255,255,0.04);
+            padding: 0 8px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #8b9aaf;
+        }
+
+        .jogo-numbers {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .jogo-ball {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1.5px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s;
+        }
+        .jogo-ball:hover {
+            transform: scale(1.08);
+        }
+        .jogo-ball.par {
+            border-color: rgba(88, 166, 255, 0.2);
+            color: #58a6ff;
+        }
+        .jogo-ball.impar {
+            border-color: rgba(247, 183, 49, 0.2);
+            color: #f7b731;
+        }
+        .jogo-ball.primo {
+            border-color: rgba(163, 113, 247, 0.2);
+            color: #a371f7;
+        }
+        .jogo-ball.par.primo {
+            border-color: rgba(88, 166, 255, 0.3);
+            background: rgba(88, 166, 255, 0.05);
+        }
+        .jogo-ball.impar.primo {
+            border-color: rgba(247, 183, 49, 0.3);
+            background: rgba(247, 183, 49, 0.05);
+        }
+
+        .copiar-btn {
+            background: rgba(88, 166, 255, 0.06);
+            border: 1px solid rgba(88, 166, 255, 0.08);
+            color: #58a6ff;
+            padding: 3px 12px;
+            border-radius: 6px;
+            font-size: 9px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .copiar-btn:hover {
+            background: rgba(88, 166, 255, 0.12);
+        }
+        .copiar-btn:active {
+            transform: scale(0.92);
+        }
+        .copiar-btn.copiado {
+            background: rgba(63, 185, 80, 0.12);
+            border-color: rgba(63, 185, 80, 0.15);
+            color: #3fb950;
+        }
+
+        /* ===== EMPTY STATE ===== */
+        .empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7a8f;
+        }
+        .empty .icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            opacity: 0.3;
+        }
+        .empty p {
+            font-size: 13px;
+        }
+
+        /* ===== DICAS ===== */
+        .dicas {
+            background: rgba(88, 166, 255, 0.03);
+            border: 1px solid rgba(88, 166, 255, 0.05);
+            border-radius: 12px;
+            padding: 14px;
+        }
+        .dicas ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .dicas li {
+            padding: 5px 0;
+            font-size: 11px;
+            color: #6b7a8f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+        .dicas li:last-child {
+            border-bottom: none;
+        }
+        .dicas li .icon {
+            font-size: 14px;
+        }
+        .dicas li strong {
+            color: #e8edf5;
+            font-weight: 600;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(63, 185, 80, 0.92);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            z-index: 999;
+            box-shadow: 0 8px 32px rgba(63, 185, 80, 0.2);
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 420px) {
+            .header h1 { font-size: 24px; }
+            .modes .mode-btn { font-size: 9px; padding: 8px 2px; }
+            .modes .mode-btn .emoji { font-size: 16px; }
+            .btn-group .btn { font-size: 12px; padding: 9px 6px; min-width: 45px; }
+            .jogo-ball { width: 30px; height: 30px; font-size: 11px; }
+            .stats-grid .stat-item .value { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🎯 Lotofácil Pro</h1>
+            <p class="sub">Gerador inteligente com análise estatística</p>
+            <span class="badge">⚡ 2026 · Modos premium</span>
+        </div>
+
+        <!-- CONTROLES -->
+        <div class="card">
+            <div class="card-title">🎯 Modo de Geração</div>
+            
+            <div class="modes">
+                <button class="mode-btn active" data-mode="estatistico" onclick="setModo('estatistico')">
+                    <span class="emoji">📊</span> Estatístico
+                </button>
+                <button class="mode-btn" data-mode="aleatorio" onclick="setModo('aleatorio')">
+                    <span class="emoji">🎲</span> Aleatório
+                </button>
+                <button class="mode-btn" data-mode="equilibrado" onclick="setModo('equilibrado')">
+                    <span class="emoji">⚖️</span> Equilibrado
+                </button>
+                <button class="mode-btn" data-mode="primos" onclick="setModo('primos')">
+                    <span class="emoji">🔢</span> Primos
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn primary" onclick="gerar(1)">🎲 1</button>
+                <button class="btn secondary" onclick="gerar(3)">🎲 3</button>
+                <button class="btn green" onclick="gerar(5)">🎲 5</button>
+                <button class="btn purple" onclick="gerar(10)">🎲 10</button>
+            </div>
+
+            <div class="filters">
+                <label><input type="checkbox" id="chk-equilibrio" checked> ⚖️ Equilíbrio P/I</label>
+                <label><input type="checkbox" id="chk-soma" checked> 📊 Soma equilibrada</label>
+                <label><input type="checkbox" id="chk-sequencia" checked> 🔄 Evitar sequências</label>
+            </div>
+        </div>
+
+        <!-- ANÁLISE -->
+        <div id="stats-section" class="hidden">
+            <div class="card">
+                <div class="card-title">📊 Análise do Jogo</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="label">Ímpares</div>
+                        <div class="value impar" id="stat-impares">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Pares</div>
+                        <div class="value par" id="stat-pares">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Primos</div>
+                        <div class="value primo" id="stat-primos">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Soma</div>
+                        <div class="value soma" id="stat-soma">0</div>
+                    </div>
+                </div>
+                <div class="analise-texto" id="analise-texto">
+                    🎯 Distribuição: <strong id="dist-texto">8 ímpares + 7 pares</strong>
+                    <span id="status-texto" class="perfeito">✅ Perfeita!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div id="resultados">
+            <div class="empty">
+                <div class="icon">🎯</div>
+                <p>Clique em um botão acima para gerar seus jogos</p>
+            </div>
+        </div>
+
+        <!-- DICAS -->
+        <div class="card">
+            <div class="card-title">💡 Dicas de Ouro</div>
+            <div class="dicas">
+                <ul>
+                    <li><span class="icon">📊</span> Distribuição ideal: <strong>8 ímpares + 7 pares</strong></li>
+                    <li><span class="icon">📊</span> Variação normal: <strong>6 a 9 ímpares</strong></li>
+                    <li><span class="icon">🔢</span> Números primos: <strong>3 a 5 por jogo</strong></li>
+                    <li><span class="icon">📈</span> Soma total: <strong>entre 120 e 180</strong></li>
+                    <li><span class="icon">🔄</span> Evite mais de <strong>3 números seguidos</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="text-align:center; font-size:9px; color:#3a3f4a; margin-top:16px;">
+            Baseado em estatísticas oficiais da Lotofácil · 2026
+        </p>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">✅ Copiado!</div>
+
+    <script>
+        // ============================================================
+        // CONFIG
+        // ============================================================
+        const PRIMOS = [2, 3, 5, 7, 11, 13, 17, 19, 23];
+        let MODO_ATUAL = 'estatistico';
+
+        // ============================================================
+        // GERADOR
+        // ============================================================
+
+        function isPrimo(n) {
+            if (n < 2) return false;
+            for (let i = 2; i * i <= n; i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+
+        function escolherNumero(modo) {
+            let n = Math.floor(Math.random() * 25) + 1;
+            
+            if (modo === 'estatistico') {
+                if (Math.random() < 0.3) {
+                    n = Math.floor(Math.random() * 11) + 8;
+                }
+            } else if (modo === 'primos') {
+                if (Math.random() < 0.6) {
+                    n = PRIMOS[Math.floor(Math.random() * PRIMOS.length)];
+                }
+            }
+            return Math.min(25, Math.max(1, n));
+        }
+
+        function temSequencia(numeros, novo) {
+            let count = 1;
+            let n = novo - 1;
+            while (numeros.includes(n)) { count++; n--; }
+            n = novo + 1;
+            while (numeros.includes(n)) { count++; n++; }
+            return count >= 3;
+        }
+
+        function gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia) {
+            let numeros = [];
+            let tentativas = 0;
+            const MAX_TENTATIVAS = 3000;
+
+            while (numeros.length < 15 && tentativas < MAX_TENTATIVAS) {
+                tentativas++;
+                let n = escolherNumero(modo);
+                
+                if (numeros.includes(n)) continue;
+                if (usarSequencia && temSequencia(numeros, n)) continue;
+                
+                numeros.push(n);
+            }
+
+            numeros.sort((a, b) => a - b);
+
+            let impares = numeros.filter(n => n % 2 !== 0).length;
+            let pares = 15 - impares;
+            let primosCount = numeros.filter(n => PRIMOS.includes(n)).length;
+            let soma = numeros.reduce((a, b) => a + b, 0);
+
+            if (tentativas < MAX_TENTATIVAS) {
+                if (usarEquilibrio && (impares < 5 || impares > 10)) {
+                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
+                }
+                if (usarSoma && (soma < 100 || soma > 200)) {
+                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
+                }
+                if (modo === 'equilibrado' && (impares < 7 || impares > 9)) {
+                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
+                }
+                if (modo === 'primos' && primosCount < 4) {
+                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
+                }
+            }
+
+            return {
+                numeros: numeros,
+                impares: impares,
+                pares: pares,
+                primos: primosCount,
+                soma: soma,
+                distribuicao: `${impares} ímpares + ${pares} pares`,
+                modo: modo
+            };
+        }
+
+        // ============================================================
+        // UI
+        // ============================================================
+
+        function setModo(modo) {
+            MODO_ATUAL = modo;
+            document.querySelectorAll('.mode-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.mode === modo);
+            });
+            gerar(1);
+        }
+
+        function gerar(qtd) {
+            const usarEquilibrio = document.getElementById('chk-equilibrio').checked;
+            const usarSoma = document.getElementById('chk-soma').checked;
+            const usarSequencia = document.getElementById('chk-sequencia').checked;
+
+            const container = document.getElementById('resultados');
+            container.innerHTML = '';
+
+            const modoLabel = {
+                'estatistico': '📊 Estatístico',
+                'aleatorio': '🎲 Aleatório',
+                'equilibrado': '⚖️ Equilibrado',
+                'primos': '🔢 Primos'
+            };
+
+            // Header
+            const header = document.createElement('div');
+            header.className = 'jogos-header';
+            header.innerHTML = `
+                <div class="info">
+                    <span>${qtd} ${qtd === 1 ? 'jogo' : 'jogos'}</span>
+                    <span class="modo-label">${modoLabel[MODO_ATUAL]}</span>
+                </div>
+                <button class="btn-novo" onclick="gerar(${qtd})">🔄 Novo</button>
+            `;
+            container.appendChild(header);
+
+            let jogos = [];
+            for (let i = 0; i < qtd; i++) {
+                const jogo = gerarJogo(MODO_ATUAL, usarEquilibrio, usarSoma, usarSequencia);
+                jogos.push(jogo);
+                container.appendChild(criarJogo(jogo, i + 1));
+            }
+
+            // Análise
+            if (jogos.length > 0) {
+                const j = jogos[0];
+                document.getElementById('stats-section').classList.remove('hidden');
+                document.getElementById('stat-impares').textContent = j.impares;
+                document.getElementById('stat-pares').textContent = j.pares;
+                document.getElementById('stat-primos').textContent = j.primos;
+                document.getElementById('stat-soma').textContent = j.soma;
+
+                document.getElementById('dist-texto').textContent = j.distribuicao;
+
+                const imp = j.impares;
+                const par = j.pares;
+                let status = '', classe = '';
+                if (imp === 8 && par === 7) {
+                    status = '✅ Perfeita! A mais comum';
+                    classe = 'perfeito';
+                } else if (imp >= 7 && imp <= 9) {
+                    status = '✅ Excelente! Muito comum';
+                    classe = 'bom';
+                } else if (imp >= 6 && imp <= 10) {
+                    status = '⚠️ Aceitável, mas menos comum';
+                    classe = 'aceitavel';
+                } else {
+                    status = '⚠️ Rara! Menos de 5% dos concursos';
+                    classe = 'raro';
+                }
+                const statusEl = document.getElementById('status-texto');
+                statusEl.textContent = status;
+                statusEl.className = classe;
+            }
+
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function criarJogo(jogo, numero) {
+            const div = document.createElement('div');
+            div.className = 'jogo';
+
+            const header = document.createElement('div');
+            header.className = 'jogo-header';
+            header.innerHTML = `
+                <span class="numero">#${numero}</span>
+                <div class="stats">
+                    <span><span class="dot impar"></span> ${jogo.impares}</span>
+                    <span><span class="dot par"></span> ${jogo.pares}</span>
+                    <span><span class="dot primo"></span> ${jogo.primos}</span>
+                    <span>Σ ${jogo.soma}</span>
+                    <span class="dist">${jogo.distribuicao}</span>
+                    <button class="copiar-btn" onclick="copiar(this, [${jogo.numeros.join(',')}])">📋 Copiar</button>
+                </div>
+            `;
+            div.appendChild(header);
+
+            const numbersDiv = document.createElement('div');
+            numbersDiv.className = 'jogo-numbers';
+
+            jogo.numeros.forEach(n => {
+                const ball = document.createElement('span');
+                ball.className = 'jogo-ball';
+                if (n % 2 === 0) ball.classList.add('par');
+                else ball.classList.add('impar');
+                if (PRIMOS.includes(n)) ball.classList.add('primo');
+                ball.textContent = n.toString().padStart(2, '0');
+                numbersDiv.appendChild(ball);
+            });
+
+            div.appendChild(numbersDiv);
+            return div;
+        }
+
+        // ============================================================
+        // COPIAR
+        // ============================================================
+
+        function copiar(btn, numeros) {
+            const texto = numeros.join(' - ');
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(texto).then(() => {
+                    feedbackCopiar(btn);
+                }).catch(() => fallbackCopiar(texto, btn));
+            } else {
+                fallbackCopiar(texto, btn);
+            }
+        }
+
+        function fallbackCopiar(texto, btn) {
+            const ta = document.createElement('textarea');
+            ta.value = texto;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            feedbackCopiar(btn);
+        }
+
+        function feedbackCopiar(btn) {
+            btn.textContent = '✅ Copiado!';
+            btn.classList.add('copiado');
+            
+            const toast = document.getElementById('toast');
+            toast.textContent = '✅ Números copiados!';
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                btn.textContent = '📋 Copiar';
+                btn.classList.remove('copiado');
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // ============================================================
+        // INICIALIZAÇÃO
+        // ============================================================
+
+        setTimeout(() => gerar(1), 300);
+    </script>
+
+</body>
+</html>
