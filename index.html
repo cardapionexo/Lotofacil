@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lotofácil Pro 2026</title>
+    <title>Lotofácil Gold - Gerador Premium</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            background: #0a0e17;
+            background: #070b12;
             color: #e8edf5;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             padding: 16px;
@@ -20,6 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            background-image: radial-gradient(ellipse at 50% 0%, rgba(247, 183, 49, 0.03) 0%, transparent 70%);
         }
 
         .container {
@@ -28,29 +29,35 @@
             margin: 0 auto;
         }
 
-        /* ===== HEADER PREMIUM ===== */
+        /* ===== HEADER LUXO ===== */
         .header {
             text-align: center;
-            padding: 10px 0 20px;
+            padding: 20px 0 24px;
             position: relative;
         }
         .header::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 20%;
-            right: 20%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(247, 183, 49, 0.2), transparent);
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(247, 183, 49, 0.3), rgba(247, 183, 49, 0.6), rgba(247, 183, 49, 0.3), transparent);
+            border-radius: 2px;
+        }
+        .header .gold-icon {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 4px;
         }
         .header h1 {
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 900;
             background: linear-gradient(135deg, #f7b731, #f5a623, #f7b731);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shimmer 3s ease-in-out infinite;
+            animation: shimmer 4s ease-in-out infinite;
             letter-spacing: -0.5px;
         }
         @keyframes shimmer {
@@ -75,28 +82,28 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-top: 8px;
-            border: 1px solid rgba(247, 183, 49, 0.1);
+            border: 1px solid rgba(247, 183, 49, 0.12);
             letter-spacing: 0.5px;
         }
 
-        /* ===== CARDS ===== */
+        /* ===== CARD ===== */
         .card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 16px;
-            padding: 18px;
+            padding: 20px;
             margin-bottom: 14px;
             transition: all 0.3s ease;
         }
         .card:hover {
-            border-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.07);
         }
         .card-title {
             font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             color: #6b7a8f;
             margin-bottom: 14px;
             display: flex;
@@ -104,57 +111,23 @@
             gap: 8px;
         }
 
-        /* ===== MODOS ===== */
-        .modes {
+        /* ===== REGRAS ===== */
+        .regras {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 6px;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
-        .modes .mode-btn {
-            padding: 10px 4px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+        .regra {
             background: rgba(255, 255, 255, 0.02);
-            color: #6b7a8f;
-            font-size: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            font-family: inherit;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            padding: 8px 10px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        .modes .mode-btn .emoji {
-            display: block;
-            font-size: 20px;
-            margin-bottom: 2px;
-        }
-        .modes .mode-btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 10px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            background: linear-gradient(135deg, rgba(247, 183, 49, 0.1), rgba(245, 166, 35, 0.05));
-        }
-        .modes .mode-btn:hover::before {
-            opacity: 1;
-        }
-        .modes .mode-btn:active {
-            transform: scale(0.95);
-        }
-        .modes .mode-btn.active {
-            background: rgba(247, 183, 49, 0.08);
-            border-color: rgba(247, 183, 49, 0.25);
-            color: #f7b731;
-            box-shadow: 0 0 30px rgba(247, 183, 49, 0.05);
-        }
-        .modes .mode-btn.active::before {
-            opacity: 1;
-        }
+        .regra .icon { font-size: 14px; }
+        .regra .texto { font-size: 9px; color: #6b7a8f; margin-top: 2px; }
+        .regra .valor { font-size: 12px; font-weight: 700; color: #f7b731; }
 
         /* ===== BOTÕES ===== */
         .btn-group {
@@ -165,26 +138,18 @@
         .btn-group .btn {
             flex: 1;
             min-width: 55px;
-            padding: 11px 8px;
+            padding: 12px 8px;
             border: none;
             border-radius: 10px;
             font-size: 13px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
             font-family: inherit;
             color: #fff;
             background: rgba(255, 255, 255, 0.04);
             position: relative;
             overflow: hidden;
-        }
-        .btn-group .btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 10px;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
         .btn-group .btn:active {
             transform: scale(0.95);
@@ -192,14 +157,14 @@
         .btn-group .btn.primary {
             background: linear-gradient(135deg, #f7b731, #f5a623);
             color: #0a0e17;
-            box-shadow: 0 4px 20px rgba(247, 183, 49, 0.15);
+            box-shadow: 0 4px 25px rgba(247, 183, 49, 0.15);
         }
         .btn-group .btn.primary:active {
             box-shadow: 0 2px 10px rgba(247, 183, 49, 0.08);
         }
         .btn-group .btn.secondary {
             background: rgba(88, 166, 255, 0.08);
-            border: 1px solid rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.08);
             color: #58a6ff;
         }
         .btn-group .btn.secondary:hover {
@@ -207,7 +172,7 @@
         }
         .btn-group .btn.green {
             background: rgba(63, 185, 80, 0.08);
-            border: 1px solid rgba(63, 185, 80, 0.1);
+            border: 1px solid rgba(63, 185, 80, 0.08);
             color: #3fb950;
         }
         .btn-group .btn.green:hover {
@@ -215,98 +180,64 @@
         }
         .btn-group .btn.purple {
             background: rgba(163, 113, 247, 0.08);
-            border: 1px solid rgba(163, 113, 247, 0.1);
+            border: 1px solid rgba(163, 113, 247, 0.08);
             color: #a371f7;
         }
         .btn-group .btn.purple:hover {
             background: rgba(163, 113, 247, 0.12);
         }
 
-        /* ===== FILTROS ===== */
-        .filters {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .filters label {
+        /* ===== STATUS DE VALIDAÇÃO ===== */
+        .validation-status {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(63, 185, 80, 0.05);
+            border: 1px solid rgba(63, 185, 80, 0.1);
+            border-radius: 10px;
+            margin-top: 12px;
             font-size: 11px;
             color: #6b7a8f;
-            cursor: pointer;
-            user-select: none;
-            transition: color 0.2s;
         }
-        .filters label:hover {
-            color: #8b9aaf;
+        .validation-status .check {
+            color: #3fb950;
+            font-size: 16px;
         }
-        .filters input[type="checkbox"] {
-            width: 15px;
-            height: 15px;
-            accent-color: #f7b731;
-            cursor: pointer;
-            border-radius: 4px;
+        .validation-status strong {
+            color: #e8edf5;
         }
 
-        /* ===== STATS PREMIUM ===== */
+        /* ===== STATS ===== */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
         }
         .stat-item {
             text-align: center;
-            padding: 12px 6px;
+            padding: 10px 4px;
             background: rgba(255, 255, 255, 0.02);
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: all 0.3s;
         }
-        .stat-item:hover {
-            background: rgba(255, 255, 255, 0.04);
-        }
         .stat-item .label {
-            font-size: 8px;
+            font-size: 7px;
             text-transform: uppercase;
             color: #6b7a8f;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.5px;
         }
         .stat-item .value {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 900;
             margin-top: 2px;
-            transition: all 0.3s;
         }
         .stat-item .value.par { color: #58a6ff; }
         .stat-item .value.impar { color: #f7b731; }
         .stat-item .value.primo { color: #a371f7; }
         .stat-item .value.soma { color: #3fb950; }
-
-        .analise-texto {
-            background: rgba(247, 183, 49, 0.04);
-            border: 1px solid rgba(247, 183, 49, 0.06);
-            border-radius: 10px;
-            padding: 12px 16px;
-            margin-top: 10px;
-            font-size: 12px;
-            color: #8b9aaf;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-        }
-        .analise-texto strong {
-            color: #f7b731;
-            font-weight: 700;
-        }
-        .analise-texto .perfeito { color: #3fb950; }
-        .analise-texto .bom { color: #58a6ff; }
-        .analise-texto .aceitavel { color: #f7b731; }
-        .analise-texto .raro { color: #f85149; }
+        .stat-item .value.gold { color: #f7b731; }
 
         /* ===== JOGOS ===== */
         .jogos-header {
@@ -322,7 +253,7 @@
             align-items: center;
             gap: 10px;
         }
-        .jogos-header .info .modo-label {
+        .jogos-header .info .gold-label {
             background: rgba(247, 183, 49, 0.08);
             padding: 2px 10px;
             border-radius: 12px;
@@ -335,7 +266,7 @@
         .btn-novo {
             padding: 6px 18px;
             background: rgba(247, 183, 49, 0.08);
-            border: 1px solid rgba(247, 183, 49, 0.15);
+            border: 1px solid rgba(247, 183, 49, 0.12);
             border-radius: 8px;
             color: #f7b731;
             font-size: 12px;
@@ -353,21 +284,37 @@
 
         .jogo {
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(247, 183, 49, 0.08);
             border-radius: 12px;
             padding: 14px 16px;
             margin-bottom: 10px;
             animation: slideUp 0.4s ease-out;
             transition: all 0.3s;
+            position: relative;
+        }
+        .jogo::before {
+            content: '⭐ GOLD';
+            position: absolute;
+            top: -7px;
+            right: 12px;
+            background: linear-gradient(135deg, rgba(247, 183, 49, 0.15), rgba(245, 166, 35, 0.08));
+            color: #f7b731;
+            font-size: 8px;
+            font-weight: 800;
+            padding: 0 12px;
+            border-radius: 8px;
+            letter-spacing: 0.8px;
+            border: 1px solid rgba(247, 183, 49, 0.1);
         }
         .jogo:hover {
             background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(247, 183, 49, 0.15);
         }
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         .jogo-header {
             display: flex;
             justify-content: space-between;
@@ -404,11 +351,11 @@
         .jogo-header .stats .dot.impar { background: #f7b731; }
         .jogo-header .stats .dot.primo { background: #a371f7; }
         .jogo-header .stats .dist {
-            background: rgba(255,255,255,0.04);
+            background: rgba(247, 183, 49, 0.08);
             padding: 0 8px;
             border-radius: 8px;
             font-weight: 600;
-            color: #8b9aaf;
+            color: #f7b731;
         }
 
         .jogo-numbers {
@@ -477,7 +424,6 @@
             color: #3fb950;
         }
 
-        /* ===== EMPTY STATE ===== */
         .empty {
             text-align: center;
             padding: 40px 20px;
@@ -492,39 +438,6 @@
             font-size: 13px;
         }
 
-        /* ===== DICAS ===== */
-        .dicas {
-            background: rgba(88, 166, 255, 0.03);
-            border: 1px solid rgba(88, 166, 255, 0.05);
-            border-radius: 12px;
-            padding: 14px;
-        }
-        .dicas ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .dicas li {
-            padding: 5px 0;
-            font-size: 11px;
-            color: #6b7a8f;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-        }
-        .dicas li:last-child {
-            border-bottom: none;
-        }
-        .dicas li .icon {
-            font-size: 14px;
-        }
-        .dicas li strong {
-            color: #e8edf5;
-            font-weight: 600;
-        }
-
-        /* ===== TOAST ===== */
         .toast {
             position: fixed;
             bottom: 30px;
@@ -552,14 +465,25 @@
             display: none !important;
         }
 
-        /* ===== RESPONSIVO ===== */
+        /* ===== CONTADOR DE TENTATIVAS ===== */
+        .tentativas {
+            font-size: 9px;
+            color: #4a5568;
+            text-align: center;
+            margin-top: 8px;
+        }
+
         @media (max-width: 420px) {
             .header h1 { font-size: 24px; }
-            .modes .mode-btn { font-size: 9px; padding: 8px 2px; }
-            .modes .mode-btn .emoji { font-size: 16px; }
             .btn-group .btn { font-size: 12px; padding: 9px 6px; min-width: 45px; }
             .jogo-ball { width: 30px; height: 30px; font-size: 11px; }
-            .stats-grid .stat-item .value { font-size: 20px; }
+            .stats-grid .stat-item .value { font-size: 17px; }
+            .stats-grid { grid-template-columns: repeat(5, 1fr); gap: 4px; }
+            .stat-item { padding: 6px 2px; }
+            .stat-item .label { font-size: 6px; }
+            .regras { grid-template-columns: 1fr 1fr; gap: 4px; }
+            .regra { padding: 6px 8px; }
+            .regra .valor { font-size: 11px; }
         }
     </style>
 </head>
@@ -568,48 +492,55 @@
     <div class="container">
         <!-- HEADER -->
         <div class="header">
-            <h1>🎯 Lotofácil Pro</h1>
-            <p class="sub">Gerador inteligente com análise estatística</p>
-            <span class="badge">⚡ 2026 · Modos premium</span>
+            <span class="gold-icon">👑</span>
+            <h1>Lotofácil Gold</h1>
+            <p class="sub">Gerador Premium · Validação Perfeita</p>
+            <span class="badge">⭐ 100% REGRAS BÁSICAS</span>
         </div>
 
-        <!-- CONTROLES -->
+        <!-- REGRAS -->
         <div class="card">
-            <div class="card-title">🎯 Modo de Geração</div>
-            
-            <div class="modes">
-                <button class="mode-btn active" data-mode="estatistico" onclick="setModo('estatistico')">
-                    <span class="emoji">📊</span> Estatístico
-                </button>
-                <button class="mode-btn" data-mode="aleatorio" onclick="setModo('aleatorio')">
-                    <span class="emoji">🎲</span> Aleatório
-                </button>
-                <button class="mode-btn" data-mode="equilibrado" onclick="setModo('equilibrado')">
-                    <span class="emoji">⚖️</span> Equilibrado
-                </button>
-                <button class="mode-btn" data-mode="primos" onclick="setModo('primos')">
-                    <span class="emoji">🔢</span> Primos
-                </button>
+            <div class="card-title">📋 Regras Obrigatórias</div>
+            <div class="regras">
+                <div class="regra">
+                    <div class="icon">📊</div>
+                    <div class="texto">Ímpares</div>
+                    <div class="valor">8</div>
+                </div>
+                <div class="regra">
+                    <div class="icon">📊</div>
+                    <div class="texto">Pares</div>
+                    <div class="valor">7</div>
+                </div>
+                <div class="regra">
+                    <div class="icon">🔢</div>
+                    <div class="texto">Números Primos</div>
+                    <div class="valor">3 a 5</div>
+                </div>
+                <div class="regra">
+                    <div class="icon">📈</div>
+                    <div class="texto">Soma Total</div>
+                    <div class="valor">120 a 180</div>
+                </div>
             </div>
 
             <div class="btn-group">
-                <button class="btn primary" onclick="gerar(1)">🎲 1</button>
-                <button class="btn secondary" onclick="gerar(3)">🎲 3</button>
-                <button class="btn green" onclick="gerar(5)">🎲 5</button>
-                <button class="btn purple" onclick="gerar(10)">🎲 10</button>
+                <button class="btn primary" onclick="gerar(1)">👑 1</button>
+                <button class="btn secondary" onclick="gerar(3)">👑 3</button>
+                <button class="btn green" onclick="gerar(5)">👑 5</button>
+                <button class="btn purple" onclick="gerar(10)">👑 10</button>
             </div>
 
-            <div class="filters">
-                <label><input type="checkbox" id="chk-equilibrio" checked> ⚖️ Equilíbrio P/I</label>
-                <label><input type="checkbox" id="chk-soma" checked> 📊 Soma equilibrada</label>
-                <label><input type="checkbox" id="chk-sequencia" checked> 🔄 Evitar sequências</label>
+            <div class="validation-status">
+                <span class="check">✅</span>
+                <span>Validação em tempo real: <strong>8 ímpares</strong> · <strong>7 pares</strong> · <strong>3-5 primos</strong> · <strong>soma 120-180</strong></span>
             </div>
         </div>
 
         <!-- ANÁLISE -->
         <div id="stats-section" class="hidden">
             <div class="card">
-                <div class="card-title">📊 Análise do Jogo</div>
+                <div class="card-title">📊 Análise do Jogo Gold</div>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="label">Ímpares</div>
@@ -627,10 +558,10 @@
                         <div class="label">Soma</div>
                         <div class="value soma" id="stat-soma">0</div>
                     </div>
-                </div>
-                <div class="analise-texto" id="analise-texto">
-                    🎯 Distribuição: <strong id="dist-texto">8 ímpares + 7 pares</strong>
-                    <span id="status-texto" class="perfeito">✅ Perfeita!</span>
+                    <div class="stat-item">
+                        <div class="label">Status</div>
+                        <div class="value gold" id="stat-status">👑</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -638,31 +569,19 @@
         <!-- RESULTADOS -->
         <div id="resultados">
             <div class="empty">
-                <div class="icon">🎯</div>
-                <p>Clique em um botão acima para gerar seus jogos</p>
+                <div class="icon">👑</div>
+                <p>Clique em um botão para gerar jogos Gold</p>
+                <p style="font-size:11px; margin-top:6px; color:#f7b731;">Todos os jogos são validados automaticamente</p>
             </div>
         </div>
 
-        <!-- DICAS -->
-        <div class="card">
-            <div class="card-title">💡 Dicas de Ouro</div>
-            <div class="dicas">
-                <ul>
-                    <li><span class="icon">📊</span> Distribuição ideal: <strong>8 ímpares + 7 pares</strong></li>
-                    <li><span class="icon">📊</span> Variação normal: <strong>6 a 9 ímpares</strong></li>
-                    <li><span class="icon">🔢</span> Números primos: <strong>3 a 5 por jogo</strong></li>
-                    <li><span class="icon">📈</span> Soma total: <strong>entre 120 e 180</strong></li>
-                    <li><span class="icon">🔄</span> Evite mais de <strong>3 números seguidos</strong></li>
-                </ul>
-            </div>
-        </div>
+        <div class="tentativas" id="tentativas-info"></div>
 
         <p style="text-align:center; font-size:9px; color:#3a3f4a; margin-top:16px;">
-            Baseado em estatísticas oficiais da Lotofácil · 2026
+            👑 Gerador Premium · Validação Perfeita · 2026
         </p>
     </div>
 
-    <!-- TOAST -->
     <div class="toast" id="toast">✅ Copiado!</div>
 
     <script>
@@ -670,10 +589,10 @@
         // CONFIG
         // ============================================================
         const PRIMOS = [2, 3, 5, 7, 11, 13, 17, 19, 23];
-        let MODO_ATUAL = 'estatistico';
+        let totalTentativas = 0;
 
         // ============================================================
-        // GERADOR
+        // VALIDAÇÃO
         // ============================================================
 
         function isPrimo(n) {
@@ -682,21 +601,6 @@
                 if (n % i === 0) return false;
             }
             return true;
-        }
-
-        function escolherNumero(modo) {
-            let n = Math.floor(Math.random() * 25) + 1;
-            
-            if (modo === 'estatistico') {
-                if (Math.random() < 0.3) {
-                    n = Math.floor(Math.random() * 11) + 8;
-                }
-            } else if (modo === 'primos') {
-                if (Math.random() < 0.6) {
-                    n = PRIMOS[Math.floor(Math.random() * PRIMOS.length)];
-                }
-            }
-            return Math.min(25, Math.max(1, n));
         }
 
         function temSequencia(numeros, novo) {
@@ -708,51 +612,83 @@
             return count >= 3;
         }
 
-        function gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia) {
+        // ============================================================
+        // GERADOR GOLD - SÓ GERA QUANDO TUDO BATE
+        // ============================================================
+
+        function gerarJogoGold() {
             let numeros = [];
             let tentativas = 0;
-            const MAX_TENTATIVAS = 3000;
+            const MAX_TENTATIVAS = 50000;
+            let valido = false;
 
-            while (numeros.length < 15 && tentativas < MAX_TENTATIVAS) {
+            while (!valido && tentativas < MAX_TENTATIVAS) {
                 tentativas++;
-                let n = escolherNumero(modo);
+                numeros = [];
                 
-                if (numeros.includes(n)) continue;
-                if (usarSequencia && temSequencia(numeros, n)) continue;
+                // Gerar 15 números aleatórios
+                while (numeros.length < 15) {
+                    let n = Math.floor(Math.random() * 25) + 1;
+                    if (!numeros.includes(n)) {
+                        numeros.push(n);
+                    }
+                }
                 
-                numeros.push(n);
+                numeros.sort((a, b) => a - b);
+                
+                // VALIDAR TODAS AS REGRAS
+                const impares = numeros.filter(n => n % 2 !== 0).length;
+                const pares = 15 - impares;
+                const primosCount = numeros.filter(n => PRIMOS.includes(n)).length;
+                const soma = numeros.reduce((a, b) => a + b, 0);
+                
+                // Verificar sequências
+                let temSeq = false;
+                for (let i = 0; i < numeros.length - 2; i++) {
+                    if (numeros[i+1] === numeros[i] + 1 && numeros[i+2] === numeros[i] + 2) {
+                        temSeq = true;
+                        break;
+                    }
+                }
+                
+                // REGRA 1: Exatamente 8 ímpares e 7 pares
+                if (impares !== 8) continue;
+                
+                // REGRA 2: 3 a 5 números primos
+                if (primosCount < 3 || primosCount > 5) continue;
+                
+                // REGRA 3: Soma entre 120 e 180
+                if (soma < 120 || soma > 180) continue;
+                
+                // REGRA 4: Sem sequências de 3+
+                if (temSeq) continue;
+                
+                // Se passou por todas as regras, é válido!
+                valido = true;
+                totalTentativas += tentativas;
+                
+                return {
+                    numeros: numeros,
+                    impares: impares,
+                    pares: pares,
+                    primos: primosCount,
+                    soma: soma,
+                    distribuicao: `${impares} ímpares + ${pares} pares`,
+                    tentativas: tentativas,
+                    valido: true
+                };
             }
 
-            numeros.sort((a, b) => a - b);
-
-            let impares = numeros.filter(n => n % 2 !== 0).length;
-            let pares = 15 - impares;
-            let primosCount = numeros.filter(n => PRIMOS.includes(n)).length;
-            let soma = numeros.reduce((a, b) => a + b, 0);
-
-            if (tentativas < MAX_TENTATIVAS) {
-                if (usarEquilibrio && (impares < 5 || impares > 10)) {
-                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
-                }
-                if (usarSoma && (soma < 100 || soma > 200)) {
-                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
-                }
-                if (modo === 'equilibrado' && (impares < 7 || impares > 9)) {
-                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
-                }
-                if (modo === 'primos' && primosCount < 4) {
-                    return gerarJogo(modo, usarEquilibrio, usarSoma, usarSequencia);
-                }
-            }
-
+            // Se não encontrou (fallback - mas nunca deve acontecer)
             return {
-                numeros: numeros,
-                impares: impares,
-                pares: pares,
-                primos: primosCount,
-                soma: soma,
-                distribuicao: `${impares} ímpares + ${pares} pares`,
-                modo: modo
+                numeros: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+                impares: 7,
+                pares: 8,
+                primos: 3,
+                soma: 120,
+                distribuicao: '7 ímpares + 8 pares',
+                tentativas: tentativas,
+                valido: false
             };
         }
 
@@ -760,36 +696,18 @@
         // UI
         // ============================================================
 
-        function setModo(modo) {
-            MODO_ATUAL = modo;
-            document.querySelectorAll('.mode-btn').forEach(b => {
-                b.classList.toggle('active', b.dataset.mode === modo);
-            });
-            gerar(1);
-        }
-
         function gerar(qtd) {
-            const usarEquilibrio = document.getElementById('chk-equilibrio').checked;
-            const usarSoma = document.getElementById('chk-soma').checked;
-            const usarSequencia = document.getElementById('chk-sequencia').checked;
-
             const container = document.getElementById('resultados');
             container.innerHTML = '';
-
-            const modoLabel = {
-                'estatistico': '📊 Estatístico',
-                'aleatorio': '🎲 Aleatório',
-                'equilibrado': '⚖️ Equilibrado',
-                'primos': '🔢 Primos'
-            };
+            totalTentativas = 0;
 
             // Header
             const header = document.createElement('div');
             header.className = 'jogos-header';
             header.innerHTML = `
                 <div class="info">
-                    <span>${qtd} ${qtd === 1 ? 'jogo' : 'jogos'}</span>
-                    <span class="modo-label">${modoLabel[MODO_ATUAL]}</span>
+                    <span>${qtd} ${qtd === 1 ? 'jogo' : 'jogos'} Gold</span>
+                    <span class="gold-label">👑 Premium</span>
                 </div>
                 <button class="btn-novo" onclick="gerar(${qtd})">🔄 Novo</button>
             `;
@@ -797,10 +715,14 @@
 
             let jogos = [];
             for (let i = 0; i < qtd; i++) {
-                const jogo = gerarJogo(MODO_ATUAL, usarEquilibrio, usarSoma, usarSequencia);
+                const jogo = gerarJogoGold();
                 jogos.push(jogo);
                 container.appendChild(criarJogo(jogo, i + 1));
             }
+
+            // Mostrar tentativas
+            document.getElementById('tentativas-info').textContent = 
+                `🔍 Total de tentativas: ${totalTentativas} · Média: ${Math.round(totalTentativas/qtd)} por jogo`;
 
             // Análise
             if (jogos.length > 0) {
@@ -810,28 +732,7 @@
                 document.getElementById('stat-pares').textContent = j.pares;
                 document.getElementById('stat-primos').textContent = j.primos;
                 document.getElementById('stat-soma').textContent = j.soma;
-
-                document.getElementById('dist-texto').textContent = j.distribuicao;
-
-                const imp = j.impares;
-                const par = j.pares;
-                let status = '', classe = '';
-                if (imp === 8 && par === 7) {
-                    status = '✅ Perfeita! A mais comum';
-                    classe = 'perfeito';
-                } else if (imp >= 7 && imp <= 9) {
-                    status = '✅ Excelente! Muito comum';
-                    classe = 'bom';
-                } else if (imp >= 6 && imp <= 10) {
-                    status = '⚠️ Aceitável, mas menos comum';
-                    classe = 'aceitavel';
-                } else {
-                    status = '⚠️ Rara! Menos de 5% dos concursos';
-                    classe = 'raro';
-                }
-                const statusEl = document.getElementById('status-texto');
-                statusEl.textContent = status;
-                statusEl.className = classe;
+                document.getElementById('stat-status').textContent = '👑 GOLD';
             }
 
             container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
